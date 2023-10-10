@@ -1,24 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+//SHould start with function key word or arrow function
+//Component name should start with capital
+//you should have component body (jsx) +component logic
+//export that component to use out side
+
+import React, { createContext, useState } from "react";
+import "./App.css";
+import Homepage from "./pages/homepage";
+
+//create the context
+//provide the context
+//consume the context
+
+
+export const ThemeContext = createContext(null)
+
 
 function App() {
+
+  const [theme,setTheme]=useState(false)
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Homepage />
+  </div>
+    
   );
 }
 
